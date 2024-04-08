@@ -38,7 +38,7 @@ def get_all_href(url):
         title = item.text
         title_low = title.lower()
         link = item.select_one('a') #確保已刪文的文章不會傳回None
-        #Select article title include
+        #Select article title include keywords
         if link and kind in title_low and series in title_low and generation in title_low and area in title_low and status not in title_low:
             #Reply message with LINE Notify API
             headers = {"Authorization": "Bearer " + "rDfDKKV88vK4TgjmFzayzLEI57mTwfCwmISPLyfOmIS",
